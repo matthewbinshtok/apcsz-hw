@@ -1,0 +1,27 @@
+// I fell asleep before I could finish working on this.
+import java.util.ArrayList;
+
+// qsort(L):
+//    if length of L <= 1:
+//       return L
+//    otherwise:
+//       select pivot (randomly from within L)
+//  	 partition the list into lower and upper halves:
+//  	 R1 = qsort(lower half)
+//  	 R2 = qsort(upper half)
+//  	 combine R1 + pivot + R2 into L
+
+
+public class QuickSort {
+
+    public int quicksort(int[] a){
+	if ( a.length <= 1 ){
+	    return a;
+	}
+	int pivot = Math.random()*a.length;
+	int
+	
+	
+    }
+
+}
