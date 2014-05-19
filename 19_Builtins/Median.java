@@ -42,12 +42,4 @@ public class Median{
 	    minheap.poll();
 	}
     }
-   
-
-    public static void main (String[]main){
-
-	PriorityQueue x = new PriorityQueue();
-	PriorityQueue y = new PriorityQueue();
-
-    }
 }
