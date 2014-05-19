@@ -1,0 +1,66 @@
+import java.util.PriorityQueue;
+import java.util.*;
+
+public class Median{
+    PriorityQueue minheap = new PriorityQueue(); //min to max
+    PriorityQueue maxheap = new PriorityQueue(1, minC);
+    
+
+    public void add(double x){
+	if (minheap.size()<=maxheap.size()){
+	    minheap.add(x);
+	}
+	else{
+	    maxheap.add(x);
+	}
+    }
+    public int findMedian(){
+	if (minheap.size()> maxheap.size()){
+	    return minheap.peek();
+	}
+	else if (maxheap.size() > minheap.size()){
+	    return maxheap.peek();
+	}
+	else{
+	    return maxheap.peek() + minheap.peek();
+	}
+
+    }
+    public void removeMedian(){
+	if (minheap.size()> maxheap.size()){
+	    minheap.poll();
+	}
+	else if (maxheap.size() > minheap.size()){
+	    maxheap.poll();
+	}
+	else{
+	    maxheap.poll();
+	    minheap.poll();
+	}
+
+    }
+   
+
+    public static void main (String[]main){
+
+	PriorityQueue x = new PriorityQueue(); //min to max
+	PriorityQueue y = new PriorityQueue(1, minC);
+	x.add (1);
+	x.add (3);
+	x.add (22);
+	x.add (556);
+
+	x.add (86);
+	x.add (96);
+	x.add (6);
+	x.add (60);
+	x.add (49);
+	System.out.println(x.peek());
+
+	Object[] y = x.toArray();
+	for (int i =0; i< y.length; i++){
+	    System.out.println(y[i]);
+	}
+
+    }
+}
